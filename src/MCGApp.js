@@ -11,7 +11,7 @@ export default class MCGApp extends React.Component {
       song: "L21lcnJ5Lm1wMw==",
       message: "",
       merryc: "",
-      ok: ""
+      ok: "Qui apparirà il link al biglietto di auguri natalizi"
     };
   }
 
@@ -43,7 +43,7 @@ export default class MCGApp extends React.Component {
             fontFamily: "Raleway",
             display: "block",
             margin: "0 auto",
-            fontSize: "2.5rem"
+            fontSize: "1.9rem"
           }}
         >
           A chi vuoi mandare gli auguri?
@@ -52,7 +52,7 @@ export default class MCGApp extends React.Component {
           onChange={this.onChange}
           id="name"
           style={{
-            height: "2.3rem",
+            height: "30px",
             width: "80%",
             borderRadius: "30px",
             border: "solid 5px blue",
@@ -68,7 +68,7 @@ export default class MCGApp extends React.Component {
             fontFamily: "Raleway",
             display: "block",
             margin: "0 auto",
-            fontSize: "2.5rem"
+            fontSize: "1.9rem"
           }}
         >
           Con quale canzone vuoi fare gli auguri
@@ -77,7 +77,7 @@ export default class MCGApp extends React.Component {
           onChange={this.onChange}
           id="song"
           style={{
-            height: "2.5rem",
+            height: "40px",
             width: "80%",
             borderRadius: "30px",
             border: "solid 5px blue",
@@ -96,7 +96,7 @@ export default class MCGApp extends React.Component {
             fontFamily: "Raleway",
             display: "block",
             margin: "0 auto",
-            fontSize: "2.5rem"
+            fontSize: "1.9rem"
           }}
         >
           Vuoi lasciare un messaggio speciale?
@@ -105,7 +105,7 @@ export default class MCGApp extends React.Component {
           onChange={this.onChange}
           id="message"
           style={{
-            height: "2.3rem",
+            height: "30px",
             width: "80%",
             borderRadius: "30px",
             border: "solid 5px blue",
@@ -119,9 +119,9 @@ export default class MCGApp extends React.Component {
         <button
           onClick={this.createUrl}
           style={{
-            height: "2.3rem",
+            height: "50px",
             width: "80%",
-            marginTop: "15px",
+            marginTop: "40px",
             borderRadius: "30px",
             border: "solid 5px blue",
             backgroundColor: "gold",
@@ -144,16 +144,22 @@ export default class MCGApp extends React.Component {
         >
           {this.state.ok}
         </h1>
-        <h3
+        <input
+          onChange={this.onChange}
+          id="name"
+          value={this.state.merryc}
           style={{
+            height: "2.3rem",
+            width: "80%",
+            borderRadius: "30px",
+            border: "solid 5px blue",
+            textAlign: "center",
+            fontSize: "1.2rem",
             fontFamily: "Raleway",
             display: "block",
-            margin: "0 auto",
-            fontSize: "1.2rem"
+            margin: "auto"
           }}
-        >
-          {this.state.merryc}
-        </h3>
+        />
         <footer
           style={{
             backgroundColor: "lightgrey",
