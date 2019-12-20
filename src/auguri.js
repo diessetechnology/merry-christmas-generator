@@ -14,7 +14,7 @@ export default function Auguri() {
   let query = useQuery();
   const song = new Buffer(query.get("song"), "base64").toString("ascii");
   return (
-    <div>
+    <div className="App">
       <audio id="player" autoPlay>
         <source src={song} type="audio/mp3" />
       </audio>
@@ -39,7 +39,7 @@ export default function Auguri() {
         }}
       >
         {song === "/jingle.mp3" && (
-          <h3>
+          <h3 style={{ textAlign: "center" }}>
             Jingle Bells Kevin MacLeod (incompetech.com) Licensed under Creative
             Commons: By Attribution 3.0 License
             http://creativecommons.org/licenses/by/3.0/
