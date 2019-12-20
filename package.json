@@ -5,8 +5,8 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
+    "react": "latest",
+    "react-dom": "latest",
     "react-scripts": "3.0.1",
     "react-snowstorm": "0.0.3",
     "react-sound": "^1.2.0",
