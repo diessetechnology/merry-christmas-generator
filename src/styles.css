@@ -11,13 +11,13 @@
 @font-face {
   font-family: "Lobster";
   src: url("/Lobster-Regular.ttf") format("truetype"),
-  url("/Lobster-Regular.ttf") format("woff");
+    url("/Lobster-Regular.ttf") format("woff");
 }
 
 @font-face {
   font-family: "Raleway";
   src: url("/Raleway-Regular.ttf") format("truetype"),
-  url("/Raleway-Regular.ttf") format("woff");
+    url("/Raleway-Regular.ttf") format("woff");
 }
 
 body {
@@ -31,15 +31,17 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color:  rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 15px;
   display: table;
   text-align: center;
   font-family: "Lobster";
+  font-style: 1.5rem;
 }
 
 .testo {
   display: table-cell;
-  vertical-align:middle;
+  vertical-align: middle;
   text-align: center;
 }
+
