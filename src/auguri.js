@@ -14,7 +14,7 @@ export default function Auguri() {
   let query = useQuery();
   const song = new Buffer(query.get("song"), "base64").toString("ascii");
   return (
-    <div>
+    <div className="App">
       <audio id="player" autoPlay>
         <source src={song} type="audio/mp3" />
       </audio>
@@ -38,29 +38,44 @@ export default function Auguri() {
           marginTop: "auto"
         }}
       >
+        <h3 style={{ fontFamily: "Lobster", fontSize: "1.6rem" }}>
+          Merry Christmas Generator,una magia digitale realizzata da:
+        </h3>
+        <img
+          width={100}
+          height={100}
+          style={{ display: "block", margin: "0 auto" }}
+          src="/logodiessetech.png"
+        />
+        <h3 style={{ fontFamily: "Lobster", fontSize: "1.6rem" }}>
+          Musica del biglietto d'auguri
+        </h3>
         {song === "/jingle.mp3" && (
-          <h3>
+          <h3
+            style={{
+              textAlign: "center",
+              fontFamily: "Raleway",
+              fontSize: "1.3rem"
+            }}
+          >
             Jingle Bells Kevin MacLeod (incompetech.com) Licensed under Creative
             Commons: By Attribution 3.0 License
             http://creativecommons.org/licenses/by/3.0/
           </h3>
         )}
         {song === "/merry.mp3" && (
-          <h3>
+          <h3
+            style={{
+              textAlign: "center",
+              fontFamily: "Raleway",
+              fontSize: "1.3rem"
+            }}
+          >
             We Wish you a Merry Christmas Kevin MacLeod (incompetech.com)
             Licensed under Creative Commons: By Attribution 3.0 License
             http://creativecommons.org/licenses/by/3.0/
           </h3>
         )}
-        <h3 style={{ fontFamily: "Lobster" }}>
-          Merry Christmas Generator,una magia digitale realizzata da:
-        </h3>
-        <img
-          width={150}
-          height={150}
-          style={{ display: "block", margin: "0 auto" }}
-          src="/logodiessetech.png"
-        />
       </footer>
     </div>
   );

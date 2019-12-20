@@ -39,7 +39,12 @@ export default class MCGApp extends React.Component {
       <div className="App">
         <SnowStorm flakesMaxActive={100} flakesMax={350} />
         <h1
-          style={{ fontFamily: "Raleway", display: "block", margin: "0 auto" }}
+          style={{
+            fontFamily: "Raleway",
+            display: "block",
+            margin: "0 auto",
+            fontSize: "2.5rem"
+          }}
         >
           A chi vuoi mandare gli auguri?
         </h1>
@@ -59,7 +64,12 @@ export default class MCGApp extends React.Component {
           }}
         />
         <h1
-          style={{ fontFamily: "Raleway", display: "block", margin: "0 auto" }}
+          style={{
+            fontFamily: "Raleway",
+            display: "block",
+            margin: "0 auto",
+            fontSize: "2.5rem"
+          }}
         >
           Con quale canzone vuoi fare gli auguri
         </h1>
@@ -78,13 +88,16 @@ export default class MCGApp extends React.Component {
             margin: "auto"
           }}
         >
-          <option value="/merry.mp3">
-            We wish you a merry christmas
-          </option>
+          <option value="/merry.mp3">We wish you a merry christmas</option>
           <option value="/jingle.mp3">Jingle Bells</option>
         </select>
         <h1
-          style={{ fontFamily: "Raleway", display: "block", margin: "0 auto" }}
+          style={{
+            fontFamily: "Raleway",
+            display: "block",
+            margin: "0 auto",
+            fontSize: "2.5rem"
+          }}
         >
           Vuoi lasciare un messaggio speciale?
         </h1>
@@ -121,8 +134,26 @@ export default class MCGApp extends React.Component {
         >
           Genera messaggio natalizio
         </button>
-        <h1>{this.state.ok}</h1>
-        <h3>{this.state.merryc}</h3>
+        <h1
+          style={{
+            fontFamily: "Raleway",
+            display: "block",
+            margin: "0 auto",
+            fontSize: "1.5rem"
+          }}
+        >
+          {this.state.ok}
+        </h1>
+        <h3
+          style={{
+            fontFamily: "Raleway",
+            display: "block",
+            margin: "0 auto",
+            fontSize: "1.2rem"
+          }}
+        >
+          {this.state.merryc}
+        </h3>
         <footer
           style={{
             backgroundColor: "lightgrey",
@@ -130,7 +161,7 @@ export default class MCGApp extends React.Component {
             marginTop: "auto"
           }}
         >
-          <h3 style={{ fontFamily: "Lobster" }}>
+          <h3 style={{ fontFamily: "Lobster", fontSize: "1.6rem" }}>
             Merry Christmas Generator,una magia digitale realizzata da:
           </h3>
           <img
