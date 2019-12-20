@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: |
-       docker build . --file Dockerfile --tag merry-christmas-generator:$(date +%s)
+       docker build . --file Dockerfile --tag merry-christmas-generator:$(date +"%d-%m-%Y")
        docker login docker.pkg.github.com --username phanatic --password {{secrets.MY_TOKEN}}
-       docker tag merry-christmas-generator:$(date +%s) docker.pkg.github.com/diessetechnology/merry-christmas-generator/merry-christmas-generator:$(date +%s)
-       docker push docker.pkg.github.com/diessetechnology/merry-christmas-generator/merry-christmas-generator:$(date +%s)
+       docker tag merry-christmas-generator:$(date +"%d-%m-%Y") docker.pkg.github.com/diessetechnology/merry-christmas-generator/merry-christmas-generator:$(date +"%d-%m-%Y")
+       docker push docker.pkg.github.com/diessetechnology/merry-christmas-generator/merry-christmas-generator:$(date +"%d-%m-%Y")
