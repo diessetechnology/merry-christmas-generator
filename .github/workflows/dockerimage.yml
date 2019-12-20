@@ -14,5 +14,5 @@ jobs:
       run: |
        docker build . --file Dockerfile --tag merry-christmas-generator:$(date +%s)
        docker login docker.pkg.github.com --username phanatic --password {{secrets.MY_TOKEN}}
-       docker tag app docker.pkg.github.com/diessetechnology/merry-christmas-generator/merry-christmas-generator:$(date +%s)
+       docker tag merry-christmas-generator:$(date +%s) docker.pkg.github.com/diessetechnology/merry-christmas-generator/merry-christmas-generator:$(date +%s)
        docker push docker.pkg.github.com/diessetechnology/merry-christmas-generator/merry-christmas-generator:$(date +%s)
